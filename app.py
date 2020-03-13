@@ -36,7 +36,7 @@ def generate_table(dataframe, max_rows=100):
     ])
 
 markdown_text_1 = '''
-### DublinAI Fellowship
+### DublinAI Fellowship 
 
 DublinAI Fellowship is an intensive, eight-week professional development program for PhD grads and postdoctoral researchers that help's bridge the gap to a full-time career in data & AI related fields. Careers include Data Scientist, Machine Learning Engineer, Data Analyst or niche AI expert (NLP, Computer Vision etc).
 
@@ -131,8 +131,10 @@ app.layout = html.Div([
             )
         }
     ),
-            html.Img(id='dublinAI_logo2',
-                     src='https://churnbucket.ie/static/dublinAI_logo.png'),
+# =============================================================================
+#             html.Img(id='dublinAI_logo2',
+#                      src='https://churnbucket.ie/static/dublinAI_logo.png'),
+# =============================================================================
 #            dcc.Markdown(children=markdown_text_1),
             dcc.Markdown(children=markdown_text_ChurnCount),
             html.Img(id='ChurnCount',
