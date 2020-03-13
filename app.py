@@ -18,9 +18,9 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 # df = pd.read_csv('https://gist.githubusercontent.com/chriddyp/c78bf172206ce24f77d6363a2d754b59/raw/c353e8ef842413cae56ae3920b8fd78468aa4cb2/usa-agricultural-exports-2011.csv')
 
-df = pd.read_csv('/Users/billcoleman/NOTEBOOKS/DublinAI/data.csv')
+df = pd.read_csv('data.csv')
 df2 = df[['tenure', 'MonthlyCharges', 'TotalCharges', 'linear_prob',
-          'linear_pred', 'Avg_Monthly']]
+          'linear_pred']]
 
 def generate_table(dataframe, max_rows=100):
     return html.Table([
