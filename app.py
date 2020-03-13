@@ -18,6 +18,7 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 # df = pd.read_csv('https://gist.githubusercontent.com/chriddyp/c78bf172206ce24f77d6363a2d754b59/raw/c353e8ef842413cae56ae3920b8fd78468aa4cb2/usa-agricultural-exports-2011.csv')
 
+# df = pd.read_csv('/Users/billcoleman/NOTEBOOKS/DublinAI/data.csv')
 df = pd.read_csv('data.csv')
 df2 = df[['tenure', 'MonthlyCharges', 'TotalCharges', 'linear_prob',
           'linear_pred']]
@@ -101,7 +102,8 @@ As can be seen from the graphics this model attributes more importance to the te
 
 app.layout = html.Div([
         html.Img(id='dublinAI_logo',
-                     src='https://churnbucket.ie/static/dublinAI_logo.png'),
+                     src='https://demo.churnbucket.ie/static/dublinAI_logo.png'),
+
                   dcc.Markdown(children=markdown_text_1),
 
     dcc.Graph(
@@ -137,37 +139,41 @@ app.layout = html.Div([
 #            dcc.Markdown(children=markdown_text_1),
             dcc.Markdown(children=markdown_text_ChurnCount),
             html.Img(id='ChurnCount',
-                     src='https://churnbucket.ie/static/ChurnCount.png'),
+                     src='https://demo.churnbucket.ie/static/ChurnCount.png'),
             dcc.Markdown(children=markdown_text_tenure),
             html.Img(id='tenure',
-                     src='https://churnbucket.ie/static/tenure.png'),
+                     src='https://demo.churnbucket.ie/static/tenure.png'),
             dcc.Markdown(children=markdown_text_Contract),
             html.Img(id='Contract',
-                     src='https://churnbucket.ie/static/Contract.png'),
+                     src='https://demo.churnbucket.ie/static/Contract.png'),
             dcc.Markdown(children=markdown_text_InternetService),
             html.Img(id='PaymentMethod',
-                     src='https://churnbucket.ie/static/PaymentMethod.png'),
+                     src='https://demo.churnbucket.ie/static/PaymentMethod.png'),
             html.Img(id='InternetService',
-                     src='https://churnbucket.ie/static/InternetService.png'),
+                     src='https://demo.churnbucket.ie/static/InternetService.png'),
             dcc.Markdown(children=markdown_text_Customer1_probability),
             html.Img(id='Cust_1_prob',
-                     src='https://churnbucket.ie/static/Customer1_probability.png'),
+                     src='https://demo.churnbucket.ie/static/Customer1_Probability.png'),
             dcc.Markdown(children=markdown_text_Cox_FeatureRelevance),
             html.Img(id='featureRelevance',
-                     src='https://churnbucket.ie/static/Cox_FeatureRelevance.png'),
+                     src='https://demo.churnbucket.ie/static/Cox_FeatureRelevance.png'),
             dcc.Markdown(children=markdown_text_Cox_InternetService),
             html.Img(id='internetService',
-                     src='https://churnbucket.ie/static/Cox_InternetService.png'),
+                     src='https://demo.churnbucket.ie/static/Cox_InternetService.png'),
             dcc.Markdown(children=markdown_text_Cox_ContractTwoYear),
             html.Img(id='Contract2Year',
-                     src='https://churnbucket.ie/static/Cox_ContractTwoYear.png'),
+                     src='https://demo.churnbucket.ie/static/Cox_ContractTwoYear.png'),
             dcc.Markdown(children=markdown_text_shapLogistic),
             html.Img(id='shapLogistic',
-                     src='https://churnbucket.ie/static/shapLogistic.png'),
+                     src='https://demo.churnbucket.ie/static/shapLogistic.png'),
             dcc.Markdown(children=markdown_text_conclusions),
 #            html.H4(children='Modified Table'),
 #            generate_table(df2),         
-])
+],
+style={'backgroundColor': 'white',
+       'color': 'black',
+       'text-align': 'center'},
+)
 
 if __name__ == '__main__':
     app.run_server(debug=True)
