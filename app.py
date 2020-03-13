@@ -20,7 +20,7 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 df = pd.read_csv('/Users/billcoleman/NOTEBOOKS/DublinAI/data.csv')
 df2 = df[['tenure', 'MonthlyCharges', 'TotalCharges', 'linear_prob',
-          'linear_pred', 'Avg_Monthly']]
+          'linear_pred']]
 
 def generate_table(dataframe, max_rows=100):
     return html.Table([
@@ -34,26 +34,37 @@ def generate_table(dataframe, max_rows=100):
         ])
     ])
 
-markdown_text = '''
-### Here's Some Texty Stuff
-## Two Hashes
-# One Hash
-#### Four hashes - this formatting seems to be similar to what you'd use in Jupyter notebooks.
+markdown_text_1 = '''
+### DublinAI Fellowship
 
-This is an example of the way text will look in tandem with visual elements.
-Incorporating images is fairly straightforward, you just need to host the image
-somewhere. See above. /\ /\ /\.
-Next I'll work out how to change size and position of stuff.
-Some of that seems to be controlled from the css stylesheet.
-Bill
+DublinAI Fellowship is an intensive, eight-week professional development program for PhD grads and postdoctoral researchers that help's bridge the gap to a full-time career in data & AI related fields. Careers include Data Scientist, Machine Learning Engineer, Data Analyst or niche AI expert (NLP, Computer Vision etc).
 
-Dash uses the [CommonMark](http://commonmark.org/)
-specification of Markdown.
-Check out their [60 Second Markdown Tutorial](http://commonmark.org/help/)
-if this is your first introduction to Markdown!
+Fellows come from a mix of data driven STEM fields: physics, math, engineering, statistics, computer science, machine & deep learning, computer vision, NLP, quantitative finance, genomics, biology, neuroscience etc.
+
+The following is an outline group project examining a telco customer churn problem. Fellows collaborated in a sprint 'hackathon' data science challenge, implementing agile development practices as a distributed team.
+
+### Customer Tenure by Monthly Charges
+
+The scope of this application is to determine the which customers are more likely to churn. As a test case we considered the telcom data that can be retrieved from [this Kaggle competition](https://www.kaggle.com/blastchar/telco-customer-churn).
+
+This plot maps customer tenure against average monthly charges. Arguably, those customers spending more per month are somewhat more likely to churn.
+'''
+
+markdown_text_ChurnCount = '''
+The data collects different features for customers that either churn or did not. The data classes are not balanced in terms of customers that did and did not churn, as can be seen in the following histogram:
+'''
+
+markdown_text_tenure = '''
+The models used in this analysis incorporate this information into the probability predictions for the different customers.
+
+To have an understanding of the data we can consider the tenure record of customers that did churn and that did not churn.
 '''
 
 app.layout = html.Div([
+        html.Img(id='dublinAI_logo',
+                     src='http://34.245.231.73:8000/dublinAI_logo.png'),
+                  dcc.Markdown(children=markdown_text_1),
+
     dcc.Graph(
         id='rem_churn_monthly_tenure',
         figure={
@@ -80,9 +91,15 @@ app.layout = html.Div([
             )
         }
     ),
-            html.Img(id='test_jpg',
-                     src='http://www.listeningtest.eu/EXP3/images/Xperi_TUD_IRC_logo.png'),
-            dcc.Markdown(children=markdown_text),
+            html.Img(id='dublinAI_logo2',
+                     src='http://34.245.231.73:8000/dublinAI_logo.png'),
+#            dcc.Markdown(children=markdown_text_1),
+            dcc.Markdown(children=markdown_text_ChurnCount),
+            html.Img(id='ChurnCount',
+                     src='http://34.245.231.73:8000/ChurnCount.png'),
+            dcc.Markdown(children=markdown_text_tenure),
+            html.Img(id='tenure',
+                     src='http://34.245.231.73:8000/tenure.png'),
             html.H4(children='Modified Table'),
             generate_table(df2),         
 ])
