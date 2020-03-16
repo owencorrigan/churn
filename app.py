@@ -42,10 +42,15 @@ DublinAI Fellowship is an intensive, eight-week professional development program
 
 Fellows come from a mix of data driven STEM fields: physics, math, engineering, statistics, computer science, machine & deep learning, computer vision, NLP, quantitative finance, genomics, biology, neuroscience etc.
 
-The following is an outline group project examining a telco customer churn problem. Fellows collaborated in a sprint 'hackathon' data science challenge, implementing agile development practices as a distributed team.
+***
 
 ## Telco Customer Churn
-### Customer Tenure by Monthly Charges
+
+The following is an outline group project examining a telco customer churn problem. Fellows collaborated in a sprint 'hackathon' data science challenge, implementing agile development practices as a distributed team.
+
+
+
+#### Customer Tenure by Monthly Charges
 
 The scope of this application is to determine the which customers are more likely to churn. As a test case we considered the telcom data that can be retrieved from [this Kaggle competition](https://www.kaggle.com/blastchar/telco-customer-churn).
 
@@ -63,17 +68,17 @@ To have an understanding of the data we can consider the tenure record of custom
 '''
 
 markdown_text_Contract = '''
-As can be seen from the histogram the majority of the customers that churn will do it after one  month (mean=17.97, mode=1, median=10). The tenure record of customers that did not churn is instead rather uniform. This seems to suggest that once a customer subscribe a contract that is long enough it will be unlikely that he will eventually churn. This intuition is supported by considering the type of contract stipulated by customers
+As can be seen from the histogram the majority of the customers that churn will do it after one  month (mean=17.97, mode=1, median=10). The tenure record of customers that did not churn is instead rather uniform. This seems to suggest that once a customer subscribes to a contract that is long enough it will be unlikely that they will eventually churn. This intuition is supported by considering the type of contract stipulated by customers.
 '''
 
 markdown_text_InternetService = '''
-In the figure, on the Churn axis, 1 stands for churning and 0 for not churning. It can be seen that it is way more likely for customers with month to month contracts to churn rather than for customers that have longer types of contracts.
+In this figure, on the Churn axis, 1 stands for churning and 0 for not churning. It can be seen that it is way more likely for customers with month to month contracts to churn rather than for customers that have longer types of contracts.
 
 Other features that seem to be relevant to determine if a customer will churn or not are the type of payment used and, surprisingly, the type of internet line used.
 '''
 
 markdown_text_Customer1_probability = '''
-The following analysis will indeed show that our intuition is correct
+The following analysis will indeed show that our intuition is correct.
 Based on the exploratory analysis, we now have a better understanding of our customer demographics and the factors that affect churn. But there is value in being able to predict if (and when) a customer is going to churn. For one, it can cost between 5 to 25 times as much to attract a new customer than to retain an existing one. What is the best way to predict churn? There is a lack of industry consensus, but survival analysis (Cox Proportional Hazards regression) and logistic regression are two techniques that have been found to produce good predictions. 
 Cox PH regression (also known as survival analysis) is generally used to model the time until a certain event takes place – in this case, churn. It not only gives us a list of possible churners for the period, but for each customer, it also enables us to examine the probability of them churning as a function of time. With this knowledge, a customer can be targeted for special promotions or mobile & web push notifications when they’re deemed to be at risk for churn. 
 
@@ -93,11 +98,11 @@ The impact of getting customers to commit to a two year contract is clear from t
 '''
 
 markdown_text_shapLogistic = '''
-Another approach that we used to analyse the problem consist in a simple logistic regression. This rather simplistic form of modelling only allow to get information about the probability that a customer will churn in the future. Anyhow, being so simple, it can be used as a first estimate as to determine which customers are more likely to churn. Similarly to what we did for the Cox model we can get an idea on which are the features that are considered diriment in determining if a customer will churn or not.
+Another approach that we used to analyse the problem consists of a simple logistic regression. This rather simplistic form of modelling only provides information about the probability that a customer will churn in the future. Being so simple, it can be used as a first estimate to determine which customers are more likely to churn. Similarly to what we did for the Cox model we can get an idea of which features are considered diriment in determining if a customer will churn or not.
 '''
 
 markdown_text_conclusions = '''
-As can be seen from the graphics this model attributes more importance to the tenure track of the customer, making it less likely for customer to churn whenever they have been customers for a long number of months. Note that in the Cox model this information is not consider as a feature and it only affect the baseline probability of the model.
+As can be seen from the graphics this model attributes more importance to the tenure track of the customer, making it less likely for the customer to churn when they have been customers for a long number of months. Note that in the Cox model this information is not considered as a feature and it only affects the baseline probability of the model.
 '''
 
 app.layout = html.Div([
@@ -172,7 +177,9 @@ app.layout = html.Div([
 ],
 style={'backgroundColor': 'white',
        'color': 'black',
-       'text-align': 'center'},
+       'text-align': 'center',
+       'max-width': '1000px',
+       'margin': 'auto'},
 )
 
 if __name__ == '__main__':
