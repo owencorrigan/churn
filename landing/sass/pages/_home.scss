@@ -1,0 +1,180 @@
+// Start How Work
+.how-work {
+    .box {
+        padding: 50px 15px;
+        border-radius: 5px;
+        box-shadow: 0 4px 20px 0 rgba(0,0,0,0.1);
+        transition: all .3s ease-in-out;
+    
+        &:hover {
+            box-shadow: 0 20px 20px 0 rgba(0,0,0,0.15);
+            transform: translateY(-10px);
+        }
+    }
+}
+
+
+// Start Check
+.check {
+    background-image: linear-gradient(to right bottom, $color-blue-light, $color-blue-dark);
+    padding: 120px;
+    position: relative;
+
+    .rocket-1 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    .rocket-2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .btn {
+        background: $color-white;
+        color: $color-text-heading;
+        height: 60px;
+        width: 160px;
+        font-size: 16px;
+        font-weight: 500;
+        box-shadow: 0 4px 20px 0 rgba(0,0,0,0.1);
+        margin-top: -8px;
+        margin-left: 20px;
+    }
+}
+
+// Start Offers
+.offers {
+    .box {
+        padding: 40px 30px;
+        border-radius: 5px;
+        box-shadow: 0 2px 15px 0 rgba(0,0,0,0.1);
+        transition: all .3s ease-in-out;
+
+        .text {
+            margin-left: 25px;
+        }
+        .icon {
+            img {
+                width: 40px;
+            }
+        }
+    }
+}
+
+// Start Counter
+.counter {
+    background: url('../../img/bg/offers.png') center center no-repeat;
+    background-size: contain;
+
+    .content {
+
+        background: url('../../img/offers-line.png') center center no-repeat;
+
+        .circle {
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            box-shadow: 0 2px 15px 0 rgba(0,0,0,0.15);
+            background: $color-white;
+
+            h3 {
+                font-size: 50px;
+                font-weight: 600;
+                margin: 0;
+            }
+
+            .num {
+                display: inline-block;
+            }
+            .color-1 { color: #f25a68; }
+            .color-2 { color: #f5a315; }
+            .color-3 { color: #9cbb2f; }
+            .color-4 { color: #009bc2; }
+        }
+    }
+}
+
+// Start Customers
+.customers {
+    background-color: $color-blue-verylight;
+    padding: 120px 0 90px 0;
+
+    .parteners {
+        display: none;
+    }
+
+    .testimonials {
+        padding: 30px;
+
+        .carousel-inner {
+            padding: 30px;
+            box-shadow: 0 2px 15px 0 rgba(0,0,0,0.15);
+            background: $color-white;
+            padding: 70px 115px;
+            width: 100%;
+            border-radius: 5px;
+        }
+        .carousel-item {
+            padding: 0 50px;
+        }
+         .carousel-item h3 {
+            font-size: 20px;
+            font-weight: 500;
+            margin: 20px 0 6px;
+        }
+         .carousel-item h4 {
+            font-size: 13px;
+            font-weight: 300;
+            margin: 0;
+            padding: 0;
+        }
+         .carousel-item p {
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 26px;
+            margin-top: 15px;
+        }
+        .carousel-item .line {
+            background: #eff0f3;
+            height: 1px;
+            width: 100%;
+        }
+        .carousel-item .tes {
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0;
+            color: $color-blue-light;
+            font-style: italic;
+
+            span {
+                color: $text-color-paragraph;
+                font-size: 12px;
+                font-weight: 300;
+                font-style: normal;
+            }
+        }
+         .carousel-indicators {
+            display: none;
+        }
+         .control {
+            cursor: pointer;
+            margin-top: 235px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            color: $color-white;
+            background-image: linear-gradient(to right bottom, $color-blue-light, $color-blue-dark);
+            font-size: 20px;
+            box-shadow: 1px 1px 10px 0 rgba(0,0,0,0.06);
+            opacity: 1 !important;
+            margin: 20px;
+            margin-top: 215px;
+        }
+    }  
+}
+
+// Start Ready
+.ready {
+    background-image: linear-gradient(to right bottom, $color-blue-light, $color-blue-dark);
+}

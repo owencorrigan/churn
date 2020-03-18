@@ -1,0 +1,62 @@
+// Navbar
+.navbar {
+    background: $color-blue-verylight;
+    .nav-item {
+        margin: 0;
+        padding: 25px 0;
+
+        .nav-link {
+            margin: 0;
+            padding: 0;
+            margin-right: 40px;
+            font-size: 15px;
+            font-weight: 400;
+            color: $color-text-dark;
+            &:hover {
+                color: $color-blue-light;
+            }
+        }
+    }
+
+    // Dropdown Menu
+    .nav-item:hover > .dropdown-menu {
+        display: block;
+    }
+    .dropdown .dropdown-menu {
+        border: $color-white;
+        box-shadow: 0 4px 20px 0 rgba(0,0,0,0.1);
+        padding: 0;
+    }
+    .dropdown .dropdown-menu a {
+        padding: 15px 5px 15px 20px;
+        font-size: 14px;
+        font-weight: 400;
+        color: $color-text-dark;
+        transition: all 0.2s ease-in-out;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #f6f6f6;
+        }
+
+        &:hover {
+            color: $color-white;
+            background-color: $color-blue-light;
+            border: none;
+            &:not(:last-child) {
+                border-bottom: 1px solid $color-blue-light;
+            }
+        }
+    }
+
+    .dropdown-toggle:after {
+        content: none;
+    }
+
+}
+
+// Slider 
+.slider {
+    background: $color-blue-verylight;
+    height: 1000px;
+    position: relative;
+}

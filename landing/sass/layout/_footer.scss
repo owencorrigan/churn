@@ -1,0 +1,86 @@
+// Footer
+.footer {
+    .who {
+        padding-right: 30px;
+    }
+    .links {
+        ul {
+            margin: 0;
+            padding: 0;
+
+            li {
+                list-style: none;
+                
+                a {
+                    font-size: 15px;
+                font-weight: 400;
+                color: $text-color-paragraph;
+                line-height: 28px;
+                margin: 0;
+                padding: 0;
+                text-decoration: none;
+                transition: all .4s ease-in-out;
+
+                &:hover {
+                    color: $color-blue-light;
+                }
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    .social {
+        .icons {
+            .icon {
+                border: 1px solid #e2e2eb;
+                width: 44px;
+                height: 44px;
+                background: $color-white;
+                border-radius: 50%;
+                transition: all .4s ease-in-out;
+
+                a {
+                    font-size: 14px;
+                    color: #848ca7;
+                    text-decoration: none;
+                    transition: all .4s ease-in-out;
+                }
+                
+                &:hover {
+                    background-image: linear-gradient(to right bottom, $color-blue-light, $color-blue-dark);
+                    color: $color-white;
+                    a {
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+        .ico {
+            display: inline-block;
+        }
+    }
+    .bottom {
+        background: #6a7695;
+        padding: 10px 0;
+        span {
+            font-size: 15px;
+            color: #6a7695;
+            display: inline-block;margin: 0;
+            padding: 0;
+        }
+    }
+}
+.bottom {
+    background: #e3eef0;
+    padding: 20px 0;
+    span {
+        font-size: 15px;
+        color: #6a7695;
+        display: inline-block;margin: 0;
+        padding: 0;
+    }
+}
